@@ -1,0 +1,101 @@
+/*Блок ОБО МНЕ*/
+.BlockContent {
+  text-align: center;
+  padding-top: 3em;
+  width: 100%;
+  margin: 0 auto;
+} /*Выравнивание контента центру. У видео с правого края образуется большая синяя полоса*/
+.BlockContent h1,
+.contact h1 {
+  font-size: 3em;
+  padding-bottom: 1em;
+}
+main .about {
+  padding-bottom: 5em;
+  width: 70%;
+  margin: 0 auto;
+}
+.about h1 {
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+  font-size: 2.5em;
+  text-align: center;
+  clear: right;
+}
+.about p {
+  font-size: 2em;
+  text-align: left;
+}
+
+/*МЕНЯЕМ РАДИОКНОПКИ*/
+input.change {
+  display: none;
+} /*Убираем радиокнопки*/
+input.change + label {
+  float: right;
+  background-color: #0b1b2c;
+  font-size: 2em;
+  color: #fafafa;
+  display: block;
+  margin-right: 5px;
+  padding: 0 10px 0 10px;
+  border-radius: 10px 10px 10px 10px;
+  line-height: 2em;
+} /*изменяем стиль кнопок*/
+input.change:first-child + label {
+  margin-left: 1em;
+} /*расстояние между кнопками*/
+input.change:checked + label {
+  -webkit-box-shadow: 0 0 50px #fafafa inset;
+  box-shadow: 0 0 50px #fafafa inset;
+} /*Стиль чекнутых кнопок*/
+input.change + label + div {
+  display: none;
+} /*Нечекнутые дивы скрыты*/
+input.change:checked + label + div {
+  display: block;
+  float: left;
+  background-color: #0b1b2c;
+  -webkit-box-shadow: 0 0 50px #fafafa inset;
+  box-shadow: 0 0 50px #fafafa inset;
+  border-radius: 10px;
+  padding: 1em;
+  margin-right: 2em;
+  margin-top: 0em;
+  margin-bottom: 0.5em;
+} /*Чекнутые дивы*/
+input.change:hover + label {
+  -webkit-box-shadow: 0 0 50px #fafafa inset;
+  box-shadow: 0 0 50px #fafafa inset;
+} /*Стиль кнопок на которых курсор*/
+input.change:hover + label + div {
+  -webkit-box-shadow: 0 0 50px #9f0215 inset;
+  box-shadow: 0 0 50px #9f0215 inset;
+} /*Стиль дивов,когда курсор на кнопке*/
+
+@media all and (max-width: 1521px) {
+  /*Блок ОБО МНЕ*/
+  .photoAbout {
+    max-width: 100%;
+  }
+  */Размер фото*/ .about h1 {
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+    padding-left: -0.5em;
+  }
+  input.change + label + div {
+    float: none;
+    width: 100%;
+  } /*Размер и стильвов дивов*/
+  iframe {
+    float: none;
+    max-height: 450px;
+    max-width: 100%;
+    overflow: auto;
+  } /*Размер видео*/
+  input.change + label {
+    float: none;
+    margin-left: 32px;
+  } /*Стиль лэйблов*/
+}

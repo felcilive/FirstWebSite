@@ -1,0 +1,132 @@
+.StoryBook {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+} /*Разделение блока на столбцы*/
+.StoryBook div:first-child {
+  margin-left: 15%;
+  width: 35%;
+} /*Размер блоков*/
+.StoryBook div:last-child {
+  margin-right: 15%;
+  width: 35%;
+} /*Размер блоков*/
+.StoryBook div {
+  padding: 1em;
+  display: inline-block;
+  background-color: #0b1b2c;
+  margin-left: 1%;
+  margin-bottom: 1%;
+  color: #fafafa;
+  -webkit-transition: 1.5s;
+  -o-transition: 1.5s;
+  transition: 1.5s;
+} /*Стиль для дивов с фильмами и книгами*/
+.StoryBook div:hover {
+  -webkit-box-shadow: 0 0 200px #9f0215 inset; /*Изменение стилей дива при поднесении мыши*/
+  box-shadow: 0 0 200px #9f0215 inset;
+}
+
+.StoryBook div h1 {
+  color: #9f0215;
+  font-size: 2em;
+  padding-top: 1em;
+  padding-top: 1em;
+  margin-bottom: 0.2em;
+  padding-right: 0.5em;
+}
+.film,
+.book {
+  position: relative;
+} /*Позиционирование для нормального размещения span-блоков*/
+input.film,
+input.book,
+input.serial,
+input.cartoon {
+  display: none;
+} /*Убираем радиокнопки*/
+input.film + label,
+input.book + label,
+input.serial + label,
+input.cartoon + label {
+  font-size: 2em;
+  color: #fafafa;
+  padding: 0.4em;
+  line-height: 5em;
+} /*изменяем стиль кнопок*/
+input.film + label + span,
+input.book + label + span,
+input.serial + label + span,
+input.cartoon + label + span {
+  display: none;
+} /*Нечекнутые span скрыты*/
+input.film:checked + label,
+input.book:checked + label,
+input.serial:checked + label,
+input.cartoon:checked + label {
+  color: #9f0215;
+} /*Стиль чекнутых label*/
+input.film:checked + label + span,
+input.book:checked + label + span,
+input.serial:checked + label + span,
+input.cartoon:checked + label + span {
+  display: block;
+  position: absolute;
+  right: 3em;
+  top: 6.5em;
+  color: #9f0215;
+  font-size: 2em;
+} /*Позиционирования стиль чекнутых span*/
+.StoryBook div h1 {
+  color: #9f0215;
+  font-size: 2em;
+  padding-top: 1.5em;
+  margin-bottom: 0.2em;
+  padding-right: 0.5em;
+}
+.StoryBook div p {
+  font-size: 1.3em;
+  padding: 0.8em;
+}
+label:hover {
+  opacity: 0.5;
+} /*Стиль label при поднесении мыши*/
+.film a:hover,
+.book a:hover {
+  color: #9f0215;
+} /*Цвет ссылолк при поднесении*/
+div.Story {
+  margin-bottom: 3em;
+}
+div.Minus {
+  margin-bottom: -1.5em;
+} /*выравниваю марджины*/
+
+@media all and (max-width: 1521px) {
+  .StoryBook {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+  } /*Центрирование контента  и перераспределение на строки*/
+  .StoryBook div:first-child {
+    margin-left: 15%;
+    width: 70%;
+    margin-bottom: 0.5em;
+  }
+  .StoryBook div:last-child {
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
+  }
+  div.Minus {
+    margin-bottom: 0.5em;
+  }
+}
