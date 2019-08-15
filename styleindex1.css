@@ -1,0 +1,16 @@
+.videomenu{text-align:center;padding-top:3em;padding-bottom:3em;}
+.videomenu p {text-align:center;padding-top:0px;padding-bottom:1.5em;font-weight:600;}
+.videomenu h1 {padding-bottom:0px;text-align:center;padding-top:0px;font-size:3em;}
+.video{width:70%; box-sizing: border-box; margin:0 auto;}/*центрирование блоков*/
+iframe{background-color: #0b1b2c; -webkit-box-shadow: 0 0 50px #fafafa inset;
+                                    box-shadow: 0 0 50px #fafafa inset; border-radius: 10px; padding: 1em;margin-right:2em;margin-top:0em;margin-bottom:0.5em;} /*Чекнутые дивы*/
+iframe:hover {-webkit-box-shadow: 0 0 50px #9f0215 inset;
+              box-shadow: 0 0 50px #9f0215 inset; } /*Стиль дивов,когда курсор на кнопке*/
+
+@media all and (max-width: 1521px)
+{
+    
+    iframe {width:100%;}
+   
+}
+

@@ -1,0 +1,95 @@
+.poems {
+  width: 70%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.poems div h1 {
+  color: #9f0215;
+  font-size: 2em;
+  padding-top: 1.5em;
+  margin-bottom: 0.2em;
+  padding-right: 0.5em;
+}
+.poems div p {
+  font-size: 1.3em;
+  padding: 0.8em;
+}
+.poems div {
+  padding: 1em;
+  display: inline-block;
+  background-color: #0b1b2c;
+  color: #fafafa;
+  width: 35%;
+  margin-left: 0.5em;
+  -webkit-transition: 1.5s; /*Стиль для дивов со стихами*/
+  -o-transition: 1.5s;
+  transition: 1.5s;
+}
+
+div.column {
+  width: 2%;
+} /*Стиль колонок для декорации*/
+.poems div:hover {
+  -webkit-box-shadow: 0 0 200px #9f0215 inset; /*Изменение стилей дива при поднесении мыши*/
+  box-shadow: 0 0 200px #9f0215 inset;
+}
+
+input.ReadMore,
+input.ReadMore1 {
+  display: none;
+} /*Скрываем чекбоксы, оставляя только лейблы*/
+input.ReadMore + label + span,
+input.ReadMore1 + label + span {
+  display: none;
+} /*Скрываем продолжение текста*/
+input.ReadMore:checked + label + span,
+input.ReadMore1:checked + label + span {
+  display: block;
+  padding: 0.5em;
+} /*Если стрелка вниз нажата, отображаем продолжение текста*/
+input.ReadMore + label,
+input.ReadMore1 + label {
+  font-size: 1.5em;
+  font-weight: 600;
+} /*Стрелка вниз отображается*/
+input.ReadMore:checked + label,
+input.ReadMore1:checked + label {
+  display: none;
+} /*Стрелка вниз скрывается, если мы на нее нажали*/
+input.ReadMore + label + span + input + label,
+input.ReadMore1 + label + span + input + label {
+  display: none;
+} /*Стрелка вверх скрыта*/
+input.ReadMore:checked + label + span + input + label,
+input.ReadMore1:checked + label + span + input + label {
+  display: block;
+  padding: 1em;
+} /*Стрелка вверх появляется, если мы нажали на стрелку вниз*/
+label:hover {
+  opacity: 0.5;
+} /*Стиль стрелок при поднесении мыши*/
+
+@media all and (max-width: 1521px) {
+  .poems {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-left: 15%;
+    margin-right: 15%;
+  } /*Центрирование контента  и перераспределение на строки*/
+  .poems div {
+    width: 100%;
+    margin-bottom: 0.5em;
+  } /*Расположение дивов*/
+  .poems div:first-child {
+    margin-left: 1%;
+  }
+}
